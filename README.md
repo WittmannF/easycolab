@@ -3,7 +3,7 @@ Easy to use tools to be used on Google Colab. This Python package implements som
 
 ## How to install
 1. Open a Google Colab Session.
-2. On a new cell of code, type:
+2. On a new cell, type:
 ```
 !pip install easycolab
 ```
