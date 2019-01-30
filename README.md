@@ -1,5 +1,5 @@
 # EasyColab
-Easy to use tools to be used on Google Colab. This Python package implements some of the most useful commands such as mounting Google drive folders, download of big files and zip/unzip files. 
+Easy access to the most useful commands of Google Colab. This Python package is like an API for simplifying some commands that have to be used all the time when initializing Colab sections such as mounting Google drive folders, download of big files and zip/unzip files. 
 
 ## How to install
 1. Open a Google Colab Session.
