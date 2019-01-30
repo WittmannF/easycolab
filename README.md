@@ -22,6 +22,12 @@ Open the following link on Playground mode in order to test the implemented feat
 >>> ec.mount()
 ```
 
+- Open Google Drive folder:
+
+```
+>>> ec.openmydrive()
+```
+
 - Unzip File
 ```
 >>> import easycolab as ec
