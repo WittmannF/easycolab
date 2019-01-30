@@ -7,7 +7,7 @@ Easy to use tools to be used on Google Colab. This Python package implements som
 ```
 !pip install easycolab
 ```
-3. Try importing in order to check if the installation worked:
+3. Try importing easycolab to check if the installation worked:
 ```
 import easycolab as ec
 ```
