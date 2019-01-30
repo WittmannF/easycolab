@@ -41,4 +41,5 @@ Open the following link on Playground mode in order to test the implemented feat
 >>> ec.download_large_file(url, target_path='cifar.zip')
 ```
 
-
+## Licence
+MIT
