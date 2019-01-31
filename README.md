@@ -18,7 +18,6 @@ Open the following link on Playground mode in order to test the implemented feat
 
 - Mount on Google Drive
 ```
->>> import easycolab as ec
 >>> ec.mount()
 ```
 
