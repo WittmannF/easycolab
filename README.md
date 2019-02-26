@@ -12,19 +12,16 @@ Easy access to the most useful commands of Google Colab. This Python package is 
 import easycolab as ec
 ```
 
+## Updates
+- `ec.mount()` will now automatically open the folder 'My Drive'
+- New method called `tkmount(TOKEN=...)` which accepts a token as input. However it seems that each token can be used only once, so at this moment, this method does not seem useful). 
 
 ## Implemented Features
 Open the following link on Playground mode in order to test the implemented features: https://colab.research.google.com/drive/1hJYJpy4TtKUy2i7IK7YnIwk3kHhXe-WV
 
-- Mount on Google Drive
+- Mount on Google Drive and open folder My Drive
 ```
 >>> ec.mount()
-```
-
-- Open Google Drive folder:
-
-```
->>> ec.openmydrive()
 ```
 
 - Unzip File
