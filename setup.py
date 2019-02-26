@@ -3,7 +3,7 @@
 # Copyright (C) 2019 Fernando Marcos Wittmann
 
 
-VERSION = '0.1b21'
+VERSION = '0.1b24'
 
 SHORT_DESCRIPTION = "EasyColab: Easy access to the most used methods on Google Colab"
 

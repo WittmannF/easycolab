@@ -1,5 +1,6 @@
 from google.colab import drive
 import requests, os, zipfile, shutil
+from time import sleep
 
 # Libraries for the tkmount method
 import getpass as _getpass
@@ -13,8 +14,12 @@ import pexpect as _pexpect
 
 __all__ = ["mount", "tkmount", "download_large_file", "unzip", "zip", "openmydrive"]
 
-def mount(path='/content/gdrive'):
-    drive.mount(path)
+def mount(mountpoint='/content/gdrive', force_remount=False, timeout_ms=15000):
+  """Personalized mount with mountpoint already defined as default and opening gogle drive folder then"""
+  drive.mount(mountpoint, force_remount, timeout_ms)
+  sleep(2)
+  print("Opening 'My Drive' directory (/content/gdrive/My Drive/)")
+  openmydrive()
 
 def download_large_file(url, target_path='out.zip'):
   # Download the file if it does not exist
