@@ -1,34 +1,24 @@
 #! /usr/bin/env python
 #
-# Copyright (C) 2018 Fernando Marcos Wittmann
+# Copyright (C) 2019 Fernando Marcos Wittmann
 
 
-VERSION = '0.1b18'
+VERSION = '0.1b21'
 
-SHORT_DESCRIPTION = "VisualML: Visualization of Multi-Dimensional Machine Learning Models"
+SHORT_DESCRIPTION = "EasyColab: Easy access to the most used methods on Google Colab"
 
 LONG_DESCRIPTION = """\
-Visual ML is a library for visualizing the decision boundary of 
-machine learning models from Sklearn using 2D projections of pairs
-of features. Here's an example:
+Easy to use tools to be used on Google Colab. This Python package implements some of the most useful commands such as mounting Google drive folders, download of big files and zip/unzip files.
+
+## How to install
+1. Open a Google Colab Session.
+2. On a new cell, type:
 ```
->>> import visualml as vml
->>> import pandas as pd
->>> from sklearn.datasets import make_classification
->>> from sklearn.ensemble import RandomForestClassifier as RF
- 
->>> # Create a toy classification dataset
->>> feature_names = ['A','B','C','D']
->>> X, y = make_classification(n_features=4, random_state=42)
- 
->>> # The visualization is only supported if X is a pandas df
->>> X = pd.DataFrame(X, columns=feature_names)
- 
->>> # Train a classifier
->>> clf = RF(random_state=42).fit(X,y) 
- 
->>> # Plot decision boundary grid
->>> vml.decision_boundary_grid(clf, X, y)
+!pip install easycolab
+```
+3. Try importing easycolab to check if the installation worked:
+```
+import easycolab as ec
 ```
 
 """
@@ -46,24 +36,6 @@ except ImportError:
 
 def check_dependencies():
     install_requires = []
-
-    try:
-        import sklearn
-    except ImportError:
-        install_requires.append('sklearn')
-    try:
-        import numpy
-    except ImportError:
-        install_requires.append('numpy')
-    try:
-        import matplotlib
-    except ImportError:
-        install_requires.append('matplotlib')
-    try:
-        import pandas
-    except ImportError:
-        install_requires.append('pandas')
-
     return install_requires
 
 if __name__ == "__main__":
@@ -76,7 +48,7 @@ if __name__ == "__main__":
         classifiers=[
             'Development Status :: 4 - Beta',
             'Intended Audience :: Science/Research',
-            'License :: OSI Approved :: BSD License',
+            'License :: OSI Approved :: MIT License',
             'Natural Language :: English',
             "Programming Language :: Python :: 2",
             'Programming Language :: Python :: 2.7',
@@ -86,13 +58,8 @@ if __name__ == "__main__":
             'Programming Language :: Python :: 3.6',
         ],
         description=SHORT_DESCRIPTION,
-        #entry_points={
-        #    'console_scripts': [
-        #        'visualml=visualml.cli:main',
-        #    ],
-        #},
         install_requires=install_requires,
-        license="BSD-4-Clause",
+        license="MIT",
         long_description=LONG_DESCRIPTION,
         include_package_data=True,
         keywords='easycolab',
